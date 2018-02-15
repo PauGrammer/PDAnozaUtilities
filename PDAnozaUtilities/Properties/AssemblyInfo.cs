@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PDAnozaUtilities")]
-[assembly: AssemblyDescription("Sets of helper classes to speed up my own delopment.")]
+[assembly: AssemblyDescription("Sets of helper classes to speed up my own development.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PDAnozaUtilities")]

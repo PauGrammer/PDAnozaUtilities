@@ -1,6 +1,7 @@
 D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\bin\Debug\PDAnozaUtilities.dll
 D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\bin\Debug\PDAnozaUtilities.pdb
 D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\bin\Debug\MySql.Data.dll
+D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\obj\Debug\PDAnozaUtilities.csprojResolveAssemblyReference.cache
 D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\obj\Debug\PDAnozaUtilities.csproj.CoreCompileInputs.cache
 D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\obj\Debug\PDAnozaUtilities.dll
 D:\SystemsPDA\Documents\Visual Studio 2017\Projects\PDAnozaUtilities\PDAnozaUtilities\obj\Debug\PDAnozaUtilities.pdb

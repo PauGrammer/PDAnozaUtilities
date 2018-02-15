@@ -45,7 +45,17 @@ namespace PDAnozaUtilities
             desCryptoService.Mode = CipherMode.ECB;
             var iCryptoTransform = desCryptoService.CreateDecryptor();
             var byteEquivalent = Convert.FromBase64String(encryptedText);
-            return UTF8Encoding.UTF8.GetString(iCryptoTransform.TransformFinalBlock(byteEquivalent, 0, byteEquivalent.Length));
+            string decryptedText;
+
+            try
+            {
+                decryptedText = UTF8Encoding.UTF8.GetString(iCryptoTransform.TransformFinalBlock(byteEquivalent, 0, byteEquivalent.Length));
+            }
+            catch (Exception)
+            {
+                decryptedText = "Invalid";
+            }
+            return decryptedText;
         }
 
         public string DecryptString(string encryptedText, string hashKey)

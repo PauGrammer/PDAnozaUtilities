@@ -6,16 +6,22 @@ namespace PDAnozaUtilities
     public class ErrorHandler
     {
         public int ErrorID { get; private set; }
+        public bool IsSuccessful { get; private set; }
         public string Source { get; private set; }
         public string Message { get; private set; }
         public string StackTrace { get; private set; }
 
+        public ErrorHandler()
+        {
+            IsSuccessful = true;
+        }
 
         public void SetErrorDetails(string source, string message, string stacktrace)
         {
-            this.Source = source;
-            this.Message = message;
-            this.StackTrace = stacktrace;
+            IsSuccessful = false;
+            Source = source;
+            Message = message;
+            StackTrace = stacktrace;
         }
 
         public void LogToNotepad(string logFileName)

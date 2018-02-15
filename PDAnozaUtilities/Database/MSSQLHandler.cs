@@ -11,21 +11,13 @@ namespace PDAnozaUtilities.Database
         private string _ConnectionString;
         protected string Command { private get; set; }
         protected CommandType CommandType { private get; set; }
-        protected List<SqlParameter> Parameters { private get; set; }
+        protected List<SqlParameter> Parameters { get; private set; }
+        protected static SecurityHandler SecurityHandler;
         public ErrorHandler ErrorHandler;
 
         public MSSQLHandler(string connectionString)
         {
             _ConnectionString = connectionString;
-            ErrorHandler = new ErrorHandler();
-        }
-
-        public MSSQLHandler(string connectionString, string command, List<SqlParameter> parameters)
-        {
-            _ConnectionString = connectionString;
-            Command = command;
-            Parameters = parameters;
-            ErrorHandler = new ErrorHandler();
         }
 
         public bool TestConnection()
@@ -77,6 +69,7 @@ namespace PDAnozaUtilities.Database
                     }
                 }
             }
+            
             return result;
         }
 
@@ -140,7 +133,7 @@ namespace PDAnozaUtilities.Database
 
         public DataTable GetDataTable()
         {
-            DataTable dataTable = new DataTable();
+            var dataTable = new DataTable();
             using (var dbConnection = new SqlConnection(_ConnectionString))
             {
                 using (var dbCommand = new SqlCommand(Command, dbConnection))
@@ -192,5 +185,16 @@ namespace PDAnozaUtilities.Database
                 }
             }
         }
+
+        protected void SetProperties()
+        {
+            Command = null;
+            CommandType = CommandType.StoredProcedure;
+            Parameters = new List<SqlParameter>();
+            SecurityHandler = new SecurityHandler();
+            ErrorHandler = new ErrorHandler();
+        }
+            
+
     }
 }
